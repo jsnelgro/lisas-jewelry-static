@@ -18,5 +18,8 @@ jobs:
           npm run build
 
       - name: Deploy 🚀
+        env:
+          ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }} # This token has to be generated as shown in https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line
         run: |
+          set -ex
           git subtree push --prefix public origin gh-pages
