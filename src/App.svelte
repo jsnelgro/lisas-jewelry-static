@@ -111,21 +111,40 @@
     </section>
 
     <section>
+        <h2 id="staff">Friendly Staff</h2>
+        <h3>Eli Petrick</h3>
+        <p>
+            Eli studied welding in school and he can weld a post on an earring that could not be done with a
+            conventional torch. He can also repair most eyeglasses. He looks forward to the challenge of fixing
+            previously unrepairable items.
+        </p>
+    </section>
+
+    <section>
         <h2>Vendors</h2>
 
         <ul>
             {#each vendors as v}
                 <li>
                     <div>{v.name}</div>
-                    <img src="{v.logoImg}" alt="img" />
+                    <img src="{v.logoImg}" alt="img"/>
                     <div>{v.description}</div>
                 </li>
             {/each}
         </ul>
     </section>
+
+    <footer id="footer">
+        <i>Copyright © {(new Date()).getFullYear()} Lisa's Jewelry - All Rights Reserved.</i>
+    </footer>
 </main>
 
 <style>
+    #footer {
+        margin: 0;
+        padding-top: 2rem;
+    }
+
     main {
         /*text-align: center;*/
         padding: 1em;
