@@ -7,7 +7,7 @@
     "dev": "rollup -c -w",
     "start": "sirv public --no-clear",
     "check": "svelte-check --tsconfig ./tsconfig.json",
-    "deploy": "npm run build && npx surge /public lisasjewelry.net"
+    "deploy": "npm run build && cp -R public/ docs/ && git ci -m \"deploy\" && git push origin gh-pages --force"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
